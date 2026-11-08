@@ -1,0 +1,21 @@
+{
+  "name": "haimish-ecommerce",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "pnpm --filter=api dev & pnpm --filter=web dev",
+    "build": "pnpm --filter=api build && pnpm --filter=web build",
+    "db:generate": "pnpm --filter=api db:generate",
+    "db:push": "pnpm --filter=api db:push",
+    "db:seed": "pnpm --filter=api db:seed",
+    "db:studio": "pnpm --filter=api db:studio"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  },
+  "packageManager": "pnpm@9.0.0"
+}
